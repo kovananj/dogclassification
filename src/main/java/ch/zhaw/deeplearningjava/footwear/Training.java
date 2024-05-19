@@ -48,7 +48,7 @@ public final class Training {
     private static final int BATCH_SIZE = 70;
 
     // the number of passes over the complete dataset
-    private static final int EPOCHS = 8;
+    private static final int EPOCHS = 12;
 
     public static void main(String[] args) throws IOException, TranslateException {
         // the location to save the model

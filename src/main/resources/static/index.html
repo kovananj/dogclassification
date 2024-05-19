@@ -11,30 +11,71 @@
 
 <body>
 
-    <div class="container-fluid">
-        <h1>Footwear Classification</h1>
-        <p>DeepJavaLibrary (DJL) Demonstration by mosa</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Image Classification</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-        <form>
-            <div class="form-group">
-                <label for="exampleFormControlFile1">Bitte Bild hochladen (jpeg, png)</label>
-                <input type="file" accept="image/png, image/jpeg" class="form-control-file" id="image" name="image"
-                    onchange="checkFiles(this.files);">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Dog Classification</h1>
+                <p class="text-center">Bitte Bild hochladen (jpeg, png)</p>
+
+                <form>
+                    <div class="form-group">
+                        <label for="image" class="btn btn-primary btn-block">
+                            Bild auswählen
+                            <input type="file" accept="image/png, image/jpeg" class="form-control-file" id="image" name="image"
+                                onchange="checkFiles(this.files);" hidden>
+                        </label>
+                    </div>
+                </form>
+
+                <div id="answerPart" style="visibility: hidden;" class="mt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Classification Result</h5>
+                            <div id="answer" class="alert alert-info" role="alert"></div>
+
+                            <h5 class="card-title">Analyzed Image:</h5>
+                            <div class="text-center">
+                                <img id="preview" class="img-fluid rounded" src="#" alt="preview" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="alerts" class="mt-4"></div>
             </div>
-        </form>
-
-        <div id="answerPart" style="visibility: hidden;">
-            <p><b>Answer:</b>
-            <div id="answer"></div>
-            </p>
-
-            <p id="previewPart"><b>Analyzed Image:</b>
-            <p><img id="preview" width="300" src="#" alt="preview" /></p>
-            </p>
         </div>
     </div>
 
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted"> 2024 Image Classification.</span>
+        </div>
+    </footer>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJTY5KVphtPhzWj9WO1clHTMGaV9K5VoD1aPjqk7vM5chvoka"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
