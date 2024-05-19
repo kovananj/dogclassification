@@ -45,10 +45,10 @@ import java.nio.file.Paths;
 public final class Training {
 
     // represents number of training samples processed before the model is updated
-    private static final int BATCH_SIZE = 32;
+    private static final int BATCH_SIZE = 70;
 
     // the number of passes over the complete dataset
-    private static final int EPOCHS = 2;
+    private static final int EPOCHS = 8;
 
     public static void main(String[] args) throws IOException, TranslateException {
         // the location to save the model
@@ -56,7 +56,7 @@ public final class Training {
 
         // create ImageFolder dataset from directory
         // ImageFolder dataset = initDataset("ut-zap50k-images-square");
-        ImageFolder dataset = initDataset("ut-zap50k-images-square-small");
+        ImageFolder dataset = initDataset("images");
         // Split the dataset set into training dataset and validate dataset
         RandomAccessDataset[] datasets = dataset.randomSplit(8, 2);
 
